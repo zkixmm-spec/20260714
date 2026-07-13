@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칼 & 곡괭이 강화 시뮬레이터</title>
+    <link rel="stylesheet" href="weapon.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>⚔️ 칼 & 곡괭이 강화 시뮬레이터</h1>
+            <div class="gold-display">내 보유 골드: <span id="gold-count">0</span> G</div>
+        </header>
+
+        <main>
+            <section class="mine-section">
+                <h2>⛏️ 광산 구역</h2>
+                
+                <div class="storage-box">
+                    <div class="storage-info">
+                        <span>📦 광산 창고 상태</span>
+                        <span><span id="storage-current">0</span> / <span id="storage-max">100</span> G</span>
+                    </div>
+                    <div class="progress-bar"><div id="storage-bar" class="progress-fill"></div></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="mine-btn" class="main-btn">⛏️ 광산 채굴 (+<span id="click-power">1</span>)</button>
+                    <button id="collect-btn" class="main-btn collect-btn">🧺 바구니 수거 (최대 <span id="basket-power">10</span>)</button>
+                </div>
+                
+                <div class="upgrade-container">
+                    <h3>장비 관리 및 고용</h3>
+                    
+                    <div class="upgrade-item">
+                        <div>
+                            <span class="item-title">⚒️ 곡괭이 강화</span><br>
+                            <span class="item-desc">수동 채굴 파워 증가 (창고로 적재)</span>
+                        </div>
+                        <button id="upgrade-pickaxe">강화 (<span id="pickaxe-cost">50</span> G)</button>
+                        <span id="pickaxe-level">Lv.1</span>
+                    </div>
+
+                    <div class="upgrade-item">
+                        <div>
+                            <span class="item-title">👷 광부 고용</span><br>
+                            <span class="item-desc">창고에 자동 채굴 (초당 +1)</span>
+                        </div>
+                        <button id="buy-miner">고용 (<span id="miner-cost">10</span> G)</button>
+                        <span id="miner-count">0명</span>
+                    </div>
+
+                    <div class="upgrade-item">
+                        <div>
+                            <span class="item-title">🏠 창고 확장</span><br>
+                            <span class="item-desc">창고 최대 용량 증가 (+100)</span>
+                        </div>
+                        <button id="upgrade-storage">확장 (<span id="storage-cost">30</span> G)</button>
+                        <span id="storage-level">Lv.1</span>
+                    </div>
+
+                    <div class="upgrade-item">
+                        <div>
+                            <span class="item-title">🧺 바구니 강화</span><br>
+                            <span class="item-desc">수동 수거 시 최대 한도 증가 (+20)</span>
+                        </div>
+                        <button id="upgrade-basket">강화 (<span id="basket-cost">80</span> G)</button>
+                        <span id="basket-level">Lv.1</span>
+                    </div>
+
+                    <div class="upgrade-item">
+                        <div>
+                            <span class="item-title">🚜 자동 운반기</span><br>
+                            <span class="item-desc">초당 창고에서 내 인벤토리로 자동 이동 (+15)</span>
+                        </div>
+                        <button id="buy-conveyor">구매 (<span id="conveyor-cost">500</span> G)</button>
+                        <span id="conveyor-count">0개</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forge-section">
+                <h2>🔥 대장간 구역</h2>
+                <div class="weapon-status">
+                    <div id="weapon-name" class="weapon-title">훈련용 목검</div>
+                    <div class="weapon-level">[ +<span id="weapon-level">0</span> ]</div>
+                </div>
+                
+                <button id="enhance-btn" class="main-btn forge-btn">무기 강화하기</button>
+                <div class="enhance-info">
+                    필요 비용: <span id="enhance-cost">100</span> G<br>
+                    강화 확률: <span id="enhance-chance">100</span>%
+                </div>
+                <div id="log-message" class="log-box">대장간이 조용합니다...</div>
+            </section>
+        </main>
+    </div>
+
+    <script src="weapon.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>백승공 포트폴리오</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">백승공</div>
+
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">자기소개</a></li>
+        <li><a href="hobby.html">취미</a></li>
+        <li><a href="project.html">작품 & JS</a></li>
+        <li><a href="webprogramming.html">수업 후기</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Teacher · Developer · Creator</h1>
+
+    <p>
+        안녕하세요.<br>
+        교사이자 개발자, 콘텐츠 크리에이터 백승공입니다.
+    </p>
+
+    <button onclick="showMessage()">환영 인사</button>
+</header>
+<div class="profile-image">
+    <img src="zackie2.png"
+         alt="백승공 프로필"
+         id="profile"
+         onmouseover="changeImage()"
+         onmouseout="restoreImage()">
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
