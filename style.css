@@ -155,3 +155,20 @@ th,td{
 .profile-image img:hover{
     transform:scale(1.05);
 }
+
+.media-box {
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.media-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.media-box video {
+    width: 100%;
+    border-radius: 10px;
+}
