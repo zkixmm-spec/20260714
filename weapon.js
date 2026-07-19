@@ -162,7 +162,7 @@ upgradePickaxeBtn.addEventListener('click', () => {
         game.gold -= game.pickaxeCost;
         game.pickaxeLevel++;
         game.clickPower = game.pickaxeLevel + Math.floor(game.weaponLevel * 1.4);
-        game.pickaxeCost = Math.floor(game.pickaxeCost * 1.5);
+        game.pickaxeCost = Math.floor(game.pickaxeCost * 1.4);
         updateUI();
     } else { alert("골드가 부족합니다!"); }
 });
